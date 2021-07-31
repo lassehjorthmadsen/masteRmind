@@ -4,10 +4,12 @@
 \alias{rate_guess}
 \title{Rate a guess, given a set of available combinations}
 \usage{
-rate_guess(combos, guess)
+rate_guess(all_combos, remaining_combos, guess)
 }
 \arguments{
-\item{combos}{matrix of all available combinations}
+\item{all_combos}{matrix of all possible combinations, eg, colors^pegs}
+
+\item{remaining_combos}{matrix of all remaining available combinations}
 
 \item{guess}{numeric vector with a particular guess}
 }
@@ -19,5 +21,6 @@ can end up with after making this guess.
 Rate a guess, given a set of available combinations
 }
 \examples{
-rate_guess(combos = matrix(c(1,1,2,2,1,2,1,2), 4), guess = c(1, 1))
+co <- combos(2, 2)
+rate_guess(all_combos = co, remaining_combos = co, guess = c(1, 1))
 }

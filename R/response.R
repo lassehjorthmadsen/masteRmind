@@ -11,5 +11,8 @@
 #' response(code = c(1, 2, 3, 4), guess = c(1, 2, 4, 3))
 #'
 response <- function(code, guess) {
+  black <- sum(code == guess)
+  white <- min(sum(guess %in% code), sum(code %in% guess)) - black
 
+  return(c(black = black, white = white))
 }

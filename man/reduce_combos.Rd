@@ -5,23 +5,23 @@
 \title{Find subset of available combinations that are consistent with
 a given guess and response}
 \usage{
-reduce_combos(combos, guess, response)
+reduce_combos(combos, guess, resp)
 }
 \arguments{
-\item{combos}{matrix of all available combinations}
+\item{combos}{tibble with all available combinations}
 
 \item{guess}{numeric vector with a particular guess}
 
-\item{response}{named numeric vector of length 2 with response from that guess}
+\item{resp}{named numeric vector of length 2 with response from that guess}
 }
 \value{
-matrix, subset of the original
+tibble, subset of the original
 }
 \description{
 Find subset of available combinations that are consistent with
 a given guess and response
 }
 \examples{
-reduce_combos(combos, guess, response)
+reduce_combos(combos = matrix(c(1,1,2,2,1,2,1,2), 4), guess = c(1, 1), resp = c(1, 0))
 
 }

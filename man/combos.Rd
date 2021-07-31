@@ -12,7 +12,7 @@ combos(colors, pegs)
 \item{pegs}{integer from 1 to 9. Number of pegs (slots) in game}
 }
 \value{
-matrix
+tibble with all possible code combinations
 }
 \description{
 Create matrix with all possible code combinations

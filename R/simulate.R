@@ -9,6 +9,9 @@
 #' @export
 #'
 #' @examples
+#' # Not run:
+#' simulate(colors = 3, pegs = 2, strategy = "Knuth", n = 10)
+#'
 simulate <- function(colors, pegs, strategy, n) {
 
 }

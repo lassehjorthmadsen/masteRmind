@@ -21,3 +21,8 @@ vector with counts of the number of guesses used
 \description{
 Simulate different strategies in variations of Mastermind
 }
+\examples{
+# Not run:
+simulate(colors = 3, pegs = 2, strategy = "Knuth", n = 10)
+
+}
