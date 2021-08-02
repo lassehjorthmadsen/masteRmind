@@ -4,10 +4,12 @@
 \alias{make_guess}
 \title{Makes a guess a the secret code}
 \usage{
-make_guess(combos)
+make_guess(all_combos, remaining_combos)
 }
 \arguments{
-\item{combos}{available combinations to guess at}
+\item{all_combos}{tibble with all combinations to pick a guess from}
+
+\item{remaining_combos}{tibble with available combinations to guess at}
 }
 \value{
 numeric vector representing a valid guess at secret code
@@ -16,6 +18,7 @@ numeric vector representing a valid guess at secret code
 Makes a guess a the secret code
 }
 \examples{
-make_guess(combos = matrix(c(1,1,2,2,1,2,1,2), 4))
+co <- combos(2, 2)
+make_guess(all_combos = co, remaining_combos = co)
 
 }

@@ -4,23 +4,27 @@
 \alias{rate_guess}
 \title{Rate a guess, given a set of available combinations}
 \usage{
-rate_guess(all_combos, remaining_combos, guess)
+rate_guess(remaining_combos, guess, FUN = max, ...)
 }
 \arguments{
-\item{all_combos}{matrix of all possible combinations, eg, colors^pegs}
-
 \item{remaining_combos}{matrix of all remaining available combinations}
 
 \item{guess}{numeric vector with a particular guess}
+
+\item{FUN}{function used to summarise the number of remaining combinations
+after a guess followed by a response}
+
+\item{...}{parameters to be passed on to FUN if any}
 }
 \value{
-integer. Maximum number of combinations we
-can end up with after making this guess.
+Summary of the number of combinations we can end up with
+    after making this guess. Default is max(). So, after guessing
+    at a code like 1234, any response will leave us with at
+    \emph{most} this number of remaining possible combinations.
 }
 \description{
 Rate a guess, given a set of available combinations
 }
 \examples{
-co <- combos(2, 2)
-rate_guess(all_combos = co, remaining_combos = co, guess = c(1, 1))
+rate_guess(remaining_combos = combos(2, 2), guess = c(1, 1))
 }

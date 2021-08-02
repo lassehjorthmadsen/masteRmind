@@ -14,5 +14,6 @@ RoxygenNote: 7.1.1
 Imports: 
     dplyr,
     magrittr,
+    purrr,
     tibble,
     tidyr
